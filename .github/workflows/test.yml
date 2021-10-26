@@ -37,9 +37,8 @@ jobs:
       - name: Get soft ulimits open files
         run: ulimit -S
 
-      # Runs a single command using the runners shell
       - name: Run a test
-        run: export JSON_REPORT=1; make test
+        run: make test
 
       - name: Publish the coverage for main branch
         if: ${{ github.ref == 'refs/heads/main' }}
